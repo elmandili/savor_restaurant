@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVOR · modern dining</title>
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (optional but adds polish) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- header / navigation -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>SAVOR</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reserve">Reserve</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#reserve" class="btn btn-outline">Book a table</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero section -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-tag">seasonal · local · bold</span>
+                    <h1>Where fire meets flavor</h1>
+                    <p>Experience modern dining with wood-fired plates, handcrafted cocktails, and a warm atmosphere. Every dish tells a story.</p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">Explore menu</a>
+                        <a href="#reserve" class="btn btn-secondary">Reserve now</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- decorative plate illustration using CSS & icon -->
+                    <div class="plate-graphic">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- menu section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Signature dishes</h2>
+                    <p>Chef's selection · inspired by the season</p>
+                </div>
+                <div class="menu-grid" id="menuGrid">
+                    <!-- menu items injected via JavaScript -->
+                </div>
+                <div class="menu-note">
+                    <i class="fas fa-leaf"></i> Vegetarian options available · ask your server
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+        <section id="about" class="about-section">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <span class="section-tag">our story</span>
+                    <h2>Rooted in craft,<br>served with soul</h2>
+                    <p>SAVOR began as a small corner bistro with a simple belief: great food brings people together. Today, we continue that tradition with a focus on seasonal ingredients, open-fire cooking, and genuine hospitality.</p>
+                    <p>Our kitchen is led by Chef Maya, whose global travels inspire a menu that's both comforting and adventurous. Every plate is an invitation to slow down and savor.</p>
+                    <div class="about-stats">
+                        <div><strong>12+</strong> <span>chef's specials</span></div>
+                        <div><strong>100%</strong> <span>fresh & local</span></div>
+                        <div><strong>4.9</strong> <span>guest rating</span></div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="chef-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Food is memory. We cook to make yours unforgettable.</p>
+                        <span>— Chef Maya</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- reservation section -->
+        <section id="reserve" class="reserve-section">
+            <div class="container">
+                <div class="reserve-wrapper">
+                    <div class="reserve-info">
+                        <span class="section-tag">book a table</span>
+                        <h2>Join us for dinner</h2>
+                        <p>Reserve your spot for an evening of great food and good company. Walk-ins welcome, but reservations recommended.</p>
+                        <ul class="reserve-details">
+                            <li><i class="fas fa-clock"></i> Tue–Sun · 5pm – 11pm</li>
+                            <li><i class="fas fa-map-pin"></i> 127 Bistro Lane, downtown</li>
+                            <li><i class="fas fa-phone-alt"></i> (555) 123‑4567</li>
+                        </ul>
+                    </div>
+                    <div class="reserve-form-container">
+                        <form id="reservationForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full name</label>
+                                    <input type="text" id="name" placeholder="Alex Rivera" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="alex@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Time</label>
+                                    <input type="time" id="time" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guests">Guests</label>
+                                    <select id="guests">
+                                        <option value="1">1 person</option>
+                                        <option value="2" selected>2 people</option>
+                                        <option value="3">3 people</option>
+                                        <option value="4">4 people</option>
+                                        <option value="5">5 people</option>
+                                        <option value="6">6 people</option>
+                                        <option value="7+">7+ (call us)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes">Special requests</label>
+                                    <input type="text" id="notes" placeholder="Window table, birthday...">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Confirm reservation</button>
+                            <p id="formFeedback" class="form-feedback"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <i class="fas fa-utensils"></i> SAVOR
+            </div>
+            <p>© 2025 SAVOR restaurant · crafted with passion</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
